@@ -1,283 +1,137 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <style>
-    .collab-section { padding: 8px 0 4px; }
-    .collab-section h2 { margin: 0 0 8px; text-align: left; }
-    .collab-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 18px 22px;
-      justify-items: center;
+<!DOCTYPE HTML><html lang="en">  <style>    .collab-section { padding: 8px 0 4px; }    .collab-section h2 { margin: 0 0 8px; text-align: left; }    .collab-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));      gap: 18px 22px;      justify-items: center;    }    .collab-card {      width: 100%;      max-width: 220px;      text-align: center;      text-decoration: none;      color: inherit;    }    .collab-avatar {      width: 110px; height: 110px; border-radius: 50%;      object-fit: cover; display: block; margin: 0 auto 10px;      box-shadow: 0 2px 8px rgba(0,0,0,.08);    }    .collab-name { font-weight: 600; line-height: 1.2; margin: 0 0 4px; }    .collab-affil { font-size: 0.95em; color: #555; line-height: 1.3; margin: 0; }    .collab-card:hover .collab-name { text-decoration: underline; }
+    
+    /* Ongoing Projects Styles */
+    .project-item {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 16px;
+      align-items: flex-start;
     }
-    .collab-card {
-      width: 100%;
-      max-width: 220px;
+    .project-collab {
+      flex-shrink: 0;
+      width: 200px;
       text-align: center;
-      text-decoration: none;
-      color: inherit;
     }
-    .collab-avatar {
-      width: 110px; height: 110px; border-radius: 50%;
-      object-fit: cover; display: block; margin: 0 auto 10px;
+    .project-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,.08);
     }
-    .collab-name { font-weight: 600; line-height: 1.2; margin: 0 0 4px; }
-    .collab-affil { font-size: 0.95em; color: #555; line-height: 1.3; margin: 0; }
-    .collab-card:hover .collab-name { text-decoration: underline; }
-  </style>
-
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Yifei Cao</title>
-
-    <meta name="author" content="Yifei Cao">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-  </head>
-
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Yifei Cao
-                </p>
-                <p>I'm a PhD student in psychology at <a href="https://www.psych.ucla.edu/">UCLA</a> in Los Angeles, California, where I am supervised by Professor Erie Boorman in <a href='https://ldm.ucdavis.edu/'>Learning and Decision Making Lab</a>. Outside of UCLA, I am also collaborating with Dr. Maria Eckstein in <a href='https://deepmind.google/'>Google DeepMind</a>, and Dr. Xiaoyan Wu in <a href='https://xiaoyanwu2024.github.io/'>Zurich Psychiatric Hospital</a>. My PhD research focuses on the formation and navigation of human cognitive map, computational modeling of reinforcement learning process, and building artificial neural networks learn and decide like humans.
-                </p>
-                <p>
-                  Before coming to UCLA, I earned my Master degree from <a href='https://ethz.ch/en.html'>ETH Zurich</a> and <a href='https://www.uzh.ch/de.html'>University of Zurich</a>, majored in <a href='https://www.neuroscience.uzh.ch/en/Master-Studies/IDB-Overview.html'>Interdisciplinary Brain Sciences</a>. In Zurich, I have worked with Professor <a href='https://www.ini.uzh.ch/en/research/groups/mante.html'>Valerio Mante</a>, <a href='https://www.econ.uzh.ch/en/people/faculty/tobler.html'>Phillipe Tobler</a>, and <a href='https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html'>Silvia Brem</a> on human reinforcement learning and decision making process. During my time in China, I worked with Professor <a href='https://brain.bnu.edu.cn/English/Faculty/CurrentFaculty/Xzz/d293370178f744b0a72c00d82d1117d7.htm'>Gui Xue</a> to investigate the latent cognitive and neural factors contribute to human intelligence.
-                </p>
-                <p style="text-align:center">
-                  <a href="yifcao@student.ethz.ch">Email</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=Umy26vIAAAAJ&hl=en&oi=ao">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://x.com/YifeiBNU1">Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://bsky.app/profile/yifeicaoethz.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/YifeiCAO">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/yifeicao.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/yifeicao.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <!-- LOGO区域 -->
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; padding: 20px 0;">
-                  <a href="https://deepmind.google/" target="_blank">
-                    <img src="images/deepmind_logo.png" alt="DeepMind" style="width:200px; height:auto;">
-                  </a>
-                  <a href="https://ethz.ch/en.html" target="_blank">
-                    <img src="images/eth_Logo.png" alt="ETH Zurich" style="width:200px; height:auto;">
-                  </a>
-                  <a href="https://www.ucla.edu/" target="_blank">
-                    <img src="images/ucla_psych_logo.png" alt="UCLA" style="width:200px; height:auto;">
-                  </a>
-                  <a href="https://www.shallowbrain.cc/" target="_blank">
-                    <img src="images/shallowbrain.png" alt="SBT" style="width:200px; height:auto;">
-                  </a>
-                  <a href="https://www.pku.edu.cn/" target="_blank">
-                    <img src="images/puk_logo.png" alt="PKU" style="width:200px; height:auto;">
-                  </a>
-                  <a href="https://www.bnu.edu.cn/" target="_blank">
-                    <img src="images/idg_bnu.png" alt="IDG-BNU" style="width:200px; height:auto;">
-                  </a>
-                </div>
+    .project-collab-name {
+      font-weight: 600;
+      font-size: 1em;
+      margin: 0 0 2px;
+      line-height: 1.2;
+    }
+    .project-collab-affil {
+      font-size: 0.9em;
+      color: #666;
+      line-height: 1.3;
+    }
+    .project-details {
+      flex: 1;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin: 0 0 8px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .project-title:hover {
+      text-decoration: underline;
+    }
+    .project-description {
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+    }
+  </style>  <head>    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <title>Yifei Cao</title>    <meta name="author" content="Yifei Cao">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">    <link rel="stylesheet" type="text/css" href="stylesheet.css">      </head>  <body>    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>      <tr style="padding:0px">        <td style="padding:0px">          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>            <tr style="padding:0px">              <td style="padding:2.5%;width:63%;vertical-align:middle">                <p class="name" style="text-align: center;">                  Yifei Cao                </p>                <p>I'm a PhD student in psychology at <a href="https://www.psych.ucla.edu/">UCLA</a> in Los Angeles, California, where I am supervised by Professor Erie Boorman in <a href='https://ldm.ucdavis.edu/'>Learning and Decision Making Lab</a>. Outside of UCLA, I am also collaborating with Dr. Maria Eckstein in <a href='https://deepmind.google/'>Google DeepMind</a>, and Dr. Xiaoyan Wu in <a href='https://xiaoyanwu2024.github.io/'>Zurich Psychiatric Hospital</a>. My PhD research focuses on the formation and navigation of human cognitive map, computational modeling of reinforcement learning process, and building artificial neural networks learn and decide like humans.                </p>                <p>                  Before coming to UCLA, I earned my Master degree from <a href='https://ethz.ch/en.html'>ETH Zurich</a> and <a href='https://www.uzh.ch/de.html'>University of Zurich</a>, majored in <a href='https://www.neuroscience.uzh.ch/en/Master-Studies/IDB-Overview.html'>Interdisciplinary Brain Sciences</a>. In Zurich, I have worked with Professor <a href='https://www.ini.uzh.ch/en/research/groups/mante.html'>Valerio Mante</a>, <a href='https://www.econ.uzh.ch/en/people/faculty/tobler.html'>Phillipe Tobler</a>, and <a href='https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html'>Silvia Brem</a> on human reinforcement learning and decision making process. During my time in China, I worked with Professor <a href='https://brain.bnu.edu.cn/English/Faculty/CurrentFaculty/Xzz/d293370178f744b0a72c00d82d1117d7.htm'>Gui Xue</a> to investigate the latent cognitive and neural factors contribute to human intelligence.                </p>                <p style="text-align:center">                  <a href="yifcao@student.ethz.ch">Email</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;                  <a href="https://scholar.google.com/citations?user=Umy26vIAAAAJ&hl=en&oi=ao">Scholar</a> &nbsp;/&nbsp;                  <a href="https://x.com/YifeiBNU1">Twitter</a> &nbsp;/&nbsp;                  <a href="https://bsky.app/profile/yifeicaoethz.bsky.social">Bluesky</a> &nbsp;/&nbsp;                  <a href="https://github.com/YifeiCAO">Github</a>                </p>              </td>              <td style="padding:2.5%;width:37%;max-width:37%">                <a href="images/yifeicao.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/yifeicao.jpg" class="hoverZoomLink"></a>              </td>            </tr>          </tbody></table>          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>              <tr>              <td style="padding:16px;width:100%;vertical-align:middle">                <!-- LOGO区域 -->                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; padding: 20px 0;">                  <a href="https://deepmind.google/" target="_blank">                    <img src="images/deepmind_logo.png" alt="DeepMind" style="width:200px; height:auto;">                  </a>                  <a href="https://ethz.ch/en.html" target="_blank">                    <img src="images/eth_Logo.png" alt="ETH Zurich" style="width:200px; height:auto;">                  </a>                  <a href="https://www.ucla.edu/" target="_blank">                    <img src="images/ucla_psych_logo.png" alt="UCLA" style="width:200px; height:auto;">                  </a>                  <a href="https://www.shallowbrain.cc/" target="_blank">                    <img src="images/shallowbrain.png" alt="SBT" style="width:200px; height:auto;">                  </a>                  <a href="https://www.pku.edu.cn/" target="_blank">                    <img src="images/puk_logo.png" alt="PKU" style="width:200px; height:auto;">                  </a>                  <a href="https://www.bnu.edu.cn/" target="_blank">                    <img src="images/idg_bnu.png" alt="IDG-BNU" style="width:200px; height:auto;">                  </a>                </div>
                 
-                <!-- Collaborators -->
+                <!-- Ongoing Projects Section -->
                 <div class="collab-section">
-                  <h2>Collaborators</h2>
-                  <div class="collab-grid">
-                    <a class="collab-card" href="https://ldm.ucdavis.edu/" target="_blank" aria-label="Erie Boorman">
-                      <img class="collab-avatar" src="images/erie_boorman.jpeg" alt="Erie Boorman headshot">
-                      <p class="collab-name">Erie Boorman</p>
-                      <p class="collab-affil">UC Davis · Learning & Decision Making Lab</p>
-                    </a>
-                
-                    <a class="collab-card" href="https://mariaeckstein.com/" target="_blank" aria-label="Maria Eckstein">
-                      <img class="collab-avatar" src="images/maria_eckstein.png" alt="Maria Eckstein headshot">
-                      <p class="collab-name">Maria Eckstein</p>
-                      <p class="collab-affil">Google DeepMind</p>
-                    </a>
-                
-                    <a class="collab-card" href="https://xiaoyanwu2024.github.io/" target="_blank" aria-label="Xiaoyan Wu">
-                      <img class="collab-avatar" src="images/xiaoyan_wu.jpg" alt="Xiaoyan Wu headshot">
-                      <p class="collab-name">Xiaoyan Wu</p>
-                      <p class="collab-affil">Zurich Psychiatric Hospital</p>
-                    </a>
-                
-                    <a class="collab-card" href="https://www.ini.uzh.ch/en/research/groups/mante.html" target="_blank" aria-label="Valerio Mante">
-                      <img class="collab-avatar" src="images/valerio_mante.jpeg" alt="Valerio Mante headshot">
-                      <p class="collab-name">Valerio Mante</p>
-                      <p class="collab-affil">ETH Zurich · INI</p>
-                    </a>
-                
-                    <a class="collab-card" href="https://www.econ.uzh.ch/en/people/faculty/tobler.html" target="_blank" aria-label="Liyuan Li">
-                      <img class="collab-avatar" src="images/liyuan_li.jpeg" alt="Philippe Tobler headshot">
-                      <p class="collab-name">Liyuan Li</p>
-                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>
-                    </a>
-                
-                    <a class="collab-card" href="https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html" target="_blank" aria-label="Silvia Brem">
-                      <img class="collab-avatar" src="images/chonghao_cai.jpeg" alt="Silvia Brem headshot">
-                      <p class="collab-name">Chonghao Cai</p>
-                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>
-                    </a>
-                
-                    <!-- 可继续添加 -->
-                    <!--
-                    <a class="collab-card" href="https://brain.bnu.edu.cn/..." target="_blank" aria-label="Gui Xue">
-                      <img class="collab-avatar" src="images/collab/gui_xue.jpg" alt="Gui Xue headshot">
-                      <p class="collab-name">Gui Xue</p>
-                      <p class="collab-affil">Beijing Normal University</p>
-                    </a>
-                    -->
+                  <h2>Ongoing Projects</h2>
+                  
+                  <!-- Project 1 -->
+                  <div class="project-item">
+                    <div class="project-collab">
+                      <img class="project-avatar" src="images/erie_boorman.jpeg" alt="Erie Boorman">
+                      <p class="project-collab-name">Erie Boorman</p>
+                      <p class="project-collab-affil">UC Davis · Learning & Decision Making Lab</p>
+                    </div>
+                    <div class="project-details">
+                      <a href="#" class="project-title">The Formation of Cogntive Maps in Human Brain and Map-Based Inference and Generalization</a>
+                      <p class="project-description">
+                        Investigating how cognitive maps are formed in human brain, how neural representations of the maps change as learning goes. <a href='https://www.nature.com/articles/s41593-021-00916-3'>Previous studies</a> have shown that 2-D map-like representation could be learned in brain regions like entorhinal cortex and hippocampus, while prefrontal cortex tend to compress the representation to 1-D. With Erie, I use behavioral experiment, fMRI, EEG, and hopefully iEEG, and computational models to investigate the change of neural geometry during this learning process, what factor drives the HPC and PFC to form different neural representations, and how these learned neural representations support flexible inference and generalization.
+                      </p>
+                    </div>
                   </div>
+
+                  <!-- Project 2 -->
+                  <div class="project-item">
+                    <div class="project-collab">
+                      <img class="project-avatar" src="images/james_whittington.jpg" alt="Maria Eckstein">
+                      <p class="project-collab-name">James Whittington</p>
+                      <p class="project-collab-affil">Oxford</p>
+                    </div>
+                    <div class="project-details">
+                      <a href="#" class="project-title">Building Neural Network Models for Understanding Hippocampus and Prefrontal Cortex Functions</a>
+                      <p class="project-description">
+                        Collaborating with James as my co-supervisor, I am trying to develop theoretical-driven artificial neural network models to explain the process for human brain to learn a cognitive map and make decisions based on it. Building upon <a href='https://www.sciencedirect.com/science/article/pii/S009286742031388X'>Tolman-Eichenbaum Machine</a> as model for entorhinal cortex and hippocampus, and <a href='https://www.nature.com/articles/s41593-018-0147-8'>Meta-RL</a> as model for PFC, I aim at merge the two types of models to achieve a comprehensive model that explains the joint role and communication of the two brain regions.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Project 2 -->
+                  <div class="project-item">
+                    <div class="project-collab">
+                      <img class="project-avatar" src="images/jianqiao_zhu.jpg" alt="Maria Eckstein">
+                      <p class="project-collab-name">Jian-Qiao Zhu</p>
+                      <p class="project-collab-affil">Hong Kong University · Machine-Augmented Cognition Lab</p>
+                    </div>
+                    <div class="project-details">
+                      <a href="#" class="project-title">CampLLM: Using Large Language Models to Model Human Intelligence Structure</a>
+                      <p class="project-description">
+                        LLMs like <a href='https://www.nature.com/articles/s41586-025-09215-4'>Centaur</a> have shown incredible performance in modeling human behavior. However, giant need of data makes it hard to fine-tune LLMs for predicting and explaining human behaviors, and this might be the case that LLMs take short-cut to only capture human choice preferences instead of comprehensing the task structure. In order to solve this problem, we are building LLMs based on our CAMP large-scale behavioral and neural dataset collected when I was in <a href='https://www.nature.com/articles/s41586-025-09215-4'>Professor Gui Xue's lab</a>. CAMP includes over 1,100 participants performing over 70 cognitive tasks with corresponding fMRI scannings, we believe a comprehensive dataset like this provides us possibility of building a LLM that capture human intelligence structure.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <!-- Project 2 -->
+                  <div class="project-item">
+                    <div class="project-collab">
+                      <img class="project-avatar" src="images/maria_eckstein.png" alt="Maria Eckstein">
+                      <p class="project-collab-name">Maria Eckstein</p>
+                      <p class="project-collab-affil">Google DeepMind</p>
+                    </div>
+                    <div class="project-details">
+                      <a href="#" class="project-title">Hybrid Neural-Cognitive Models for Reversal Learning</a>
+                      <p class="project-description">
+                        Artificial neural networks are super predictive of human behaviors compared to classical cognitive models, however, the huge amount of parameters makes it hard to interpret the algorithms of mind. Thanks to HybridRNN, the framework raised by DeepMind, we are able to combine the precision of ANNs and interpretability of cognitive modles to understand human learning process. Here, I have been working with Maria to apply HybridRNN to understand the computational process that enable flexible adaptations in reversal learning context, and using dynamical system analysis to understand the internal representations of HybridRNN.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Project 3 -->
+                  <div class="project-item">
+                    <div class="project-collab">
+                      <img class="project-avatar" src="images/xiaoyan_wu.jpg" alt="Xiaoyan Wu">
+                      <p class="project-collab-name">Xiaoyan Wu</p>
+                      <p class="project-collab-affil">Zurich Psychiatric Hospital</p>
+                    </div>
+                    <div class="project-details">
+                      <a href="#" class="project-title">Neural Mechanism Underlying Human Altruism Motavations</a>
+                      <p class="project-description">
+                        According to <a href='https://www.nature.com/articles/s43588-024-00685-6'>Wu et al., (2024)</a>, the motivation of human altruism behavior is driven by a combination of seven different socioeconomic motives, referred to as a motive cocktail. In collaboration with Xiaoyan, we use the EEG and MEG data recorded during participants performing the same task as previous behavioral study, to decode the temporal and neural neural dynamics that support each different types of motives.
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
-
-
-
-
-
-                <h2>Research</h2>
-                <p>
-                  I am interested in the neural and computational process underlying human learning and decision making. Some papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/hybannpaper.png" alt="hybannpaper_png" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1H4YPovfrvcce3HGMEhidwU2l2fTcNR5y/view?usp=sharing">
-                  <span class="papertitle">Hybrid Neural-Cognitive Models Reveal Flexible Context-Dependent Information Processing in Reversal Learning</span>
-                </a>
-                <br>
-                <strong>Yifei Cao</strong>,
-                <a href="https://mariaeckstein.com/">Maria Eckstein</a>
-                <br>
-                <em>Sadly rejected by CCN2025 proceedings track, working on it now!</em>, 2025
-                <br>
-                <a href="https://drive.google.com/file/d/0B4nuwEMaEsnmLUQ5SVJTcUZIYXc/view?usp=sharing">supplement</a> / <a href="data/KarschCVPR2013.bib">bibtex</a>
-                <p>Hybrid cognitive and neural network modeling reveal the context-dependent value updating function exist in human flexible learning process.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/eventboundary.png" alt="b3do" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1_S8EQyngbHQrB415o0XkQ4V9SMzdEgWT/view?usp=sharing">
-                  <span class="papertitle">A position coding model that accounts for the effects of event boundaries on temporal order memory</span>
-                </a>
-                <br>
-                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/a271c3d1dab74693941a8128ced07af8.htm">Xiaojing Peng</a>,
-                <strong>Yifei Cao</strong>,
-                <a href="https://memorylab.stanford.edu/people/jintao-sheng-phd">Jintao Sheng</a>,
-                <a href="https://cbls.bnu.edu.cn/PEOPLE/Alumni/6bdee570ed0442e19b868a19a1b3d81e.htm">Yu Zhou</a>,
-                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/b3144fc042404deeb470ceab88c4ef35.htm">Huinan Hu</a>
-                <a href="https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=en">Gui Xue</a>
-                <br>
-                <em>Cognitive Psychology</em>, 2025
-                <br>
-                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /
-                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>
-                <p>We modeled human temporal memory with computational models.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/sequence.jpg" alt="seq" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.26219">
-                  <span class="papertitle">The neural representations underlying asymmetric cross-modal prediction of words</span>
-                </a>
-                <br>
-                <a href="https://scholar.google.com/citations?hl=zh-CN&user=4j1QDM0AAAAJ&view_op=list_works&sortby=pubdate">Liang Shi</a>,
-                <a href="https://scholar.google.com.hk/citations?user=GhyL9KMAAAAJ">Chuqi Liu</a>,
-                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/a271c3d1dab74693941a8128ced07af8.htm">Xiaojing Peng</a>,
-                <strong>Yifei Cao</strong>,
-                <a href="https://scholar.google.co.il/citations?user=Rv4V3aIAAAAJ&hl=en">Daniel A. Levy</a>
-                <a href="https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=en">Gui Xue</a>
-                <br>
-                <em>Human Brain Mapping</em>, 2023
-                <br>
-                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /
-                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>
-                <p>We investigated the representations of sequence memory in human brain.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/ale.png" alt="ale" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1_S8EQyngbHQrB415o0XkQ4V9SMzdEgWT/view?usp=sharing">
-                  <span class="papertitle">Effortful and effortless training of executive functions improve brain multiple demand system activities differently: an activation likelihood estimation meta-analysis of functional neuroimaging studies</span>
-                </a>
-                <br>
-                <a href="https://www.researchgate.net/profile/Chan-Tang-2">Chan Tang</a>,
-                <a href="https://www.researchgate.net/profile/Ting-Huang-40">Ting Huang</a>,
-                <a href="https://www.researchgate.net/profile/Jipeng-Huang">Jipeng Huang</a>,
-                <a href="https://www.researchgate.net/profile/Nuo-Xu-48">Nuo Xu</a>,
-                <a href="https://www.researchgate.net/profile/Yuan-Wang-132">Yuan Wang</a>,
-                <strong>Yifei Cao</strong>
-                <br>
-                <em>Frontiers in Neuroscience</em>, 2023
-                <br>
-                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /
-                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>
-                <p>Using ALE analysis on fMRI results, we synthesized neuroimaging results from over 50 studies to reveal that effortful and effortless training have different effects on human multi-demand brain system.</p>
-              </td>
-            </tr>
-            
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/meta.png" alt="meta" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.580329/full">
-                  <span class="papertitle">Effects and moderators of computer-based training on children's executive functions: a systematic review and meta-analysis</span>
-                </a>
-                <br>
-                <strong>Yifei Cao</strong>,
-                <a href="https://www.researchgate.net/profile/Ting-Huang-40">Ting Huang</a>,
-                <a href="https://www.researchgate.net/profile/Jipeng-Huang">Jipeng Huang</a>,
-                <a href="https://scholar.google.com/citations?user=xxQynVsAAAAJ&hl=en">Xiaochun Xie</a>,
-                <a href="https://www.researchgate.net/profile/Yuan-Wang-132">Yuan Wang</a>,
-                <br>
-                <em>Frontiers in Psychology</em>, 2020
-                <br>
-                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /
-                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>
-                <p>We investigated whether adding game elements into cognitive training programs improve the effects of the intervention on children's executive functions.</p>
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          
-
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+                                <!-- Collaborators -->                <div class="collab-section">                  <h2>Important Collaborators</h2>                  <div class="collab-grid">                    <a class="collab-card" href="https://www.ini.uzh.ch/en/research/groups/mante.html" target="_blank" aria-label="Valerio Mante">                      <img class="collab-avatar" src="images/valerio_mante.jpeg" alt="Valerio Mante headshot">                      <p class="collab-name">Valerio Mante</p>                      <p class="collab-affil">ETH Zurich · INI</p>                    </a>                                    <a class="collab-card" href="https://www.econ.uzh.ch/en/people/faculty/tobler.html" target="_blank" aria-label="Liyuan Li">                      <img class="collab-avatar" src="images/liyuan_li.jpeg" alt="Philippe Tobler headshot">                      <p class="collab-name">Liyuan Li</p>                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>                    </a>                                    <a class="collab-card" href="https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html" target="_blank" aria-label="Silvia Brem">                      <img class="collab-avatar" src="images/chonghao_cai.jpeg" alt="Silvia Brem headshot">                      <p class="collab-name">Chonghao Cai</p>                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>                    </a>
+                                <a class="collab-card" href="https://brain.bnu.edu.cn/English/Faculty/CurrentFaculty/Xzz/d293370178f744b0a72c00d82d1117d7.htm" target="_blank" aria-label="Gui Xue">                      <img class="collab-avatar" src="images/gui_xue.jpg" alt="Gui Xue headshot">                      <p class="collab-name">Gui Xue</p>                      <p class="collab-affil">IDG/McGOVERN BNU</p>                    </a>
+                                <a class="collab-card" href="https://www.linkedin.com/in/hanbo-xie-418885308" target="_blank" aria-label="Hanbo Xie">                      <img class="collab-avatar" src="images/hanbo_xie.webp" alt="Hanbo Xie headshot">                      <p class="collab-name">Hanbo Xie</p>                      <p class="collab-affil">Goergia Tech</p>                    </a>
+                                <a class="collab-card" href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/a271c3d1dab74693941a8128ced07af8.htm" target="_blank" aria-label="Xiaojing Peng">                      <img class="collab-avatar" src="images/xiaojing_peng.png" alt="Xiaojing Peng headshot">                      <p class="collab-name">Xiaojing Peng</p>                      <p class="collab-affil">IDG/McGOVERN · BNU</p>                    </a><!-- 可继续添加 -->                    <!--                    <a class="collab-card" href="https://brain.bnu.edu.cn/..." target="_blank" aria-label="Gui Xue">                      <img class="collab-avatar" src="images/collab/gui_xue.jpg" alt="Gui Xue headshot">                      <p class="collab-name">Gui Xue</p>                      <p class="collab-affil">Beijing Normal University</p>                    </a>                    -->                  </div>                </div>                <h2>Research</h2>                <p>                  I am interested in the neural and computational process underlying human learning and decision making. Some papers are <span class="highlight">highlighted</span>.                </p>              </td>            </tr>          </tbody></table>          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>            <tr>              <td style="padding:16px;width:20%;vertical-align:middle">                <img src="images/coginterp.png" alt="hybannpaper_png" width="160" style="border-style: none">              </td>              <td style="padding:8px;width:80%;vertical-align:middle">                <a href="https://drive.google.com/file/d/1H4YPovfrvcce3HGMEhidwU2l2fTcNR5y/view?usp=sharing">                  <span class="papertitle">Interpretable Hybrid Neural-Cognitive Models Discover Cognitive Strategies Underlying Flexible Reversal Learning</span>                </a>                <br> Chonghao Cai, Liyuan Li, <strong>Yifei Cao</strong>,                <a href="https://mariaeckstein.com/">Maria Eckstein</a>                <br>                <em>Oral Presentation at Neurips 2025 Coginterp Workshop</em>, 2025                <br>                <a href="https://drive.google.com/file/d/0B4nuwEMaEsnmLUQ5SVJTcUZIYXc/view?usp=sharing">supplement</a> / <a href="data/KarschCVPR2013.bib">bibtex</a>                <p>Hybrid cognitive and neural network modeling reveal the context-dependent value updating function exist in human flexible learning process.</p>              </td>            </tr>            <tr>              <td style="padding:16px;width:20%;vertical-align:middle">                <img src="images/eventboundary.png" alt="b3do" width="160" style="border-style: none">              </td>              <td style="padding:8px;width:80%;vertical-align:middle">                <a href="https://drive.google.com/file/d/1_S8EQyngbHQrB415o0XkQ4V9SMzdEgWT/view?usp=sharing">                  <span class="papertitle">A position coding model that accounts for the effects of event boundaries on temporal order memory</span>                </a>                <br>                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/a271c3d1dab74693941a8128ced07af8.htm">Xiaojing Peng</a>,                <strong>Yifei Cao</strong>,                <a href="https://memorylab.stanford.edu/people/jintao-sheng-phd">Jintao Sheng</a>,                <a href="https://cbls.bnu.edu.cn/PEOPLE/Alumni/6bdee570ed0442e19b868a19a1b3d81e.htm">Yu Zhou</a>,                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/b3144fc042404deeb470ceab88c4ef35.htm">Huinan Hu</a>                <a href="https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=en">Gui Xue</a>                <br>                <em>Cognitive Psychology</em>, 2025                <br>                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>                <p>We modeled human temporal memory with computational models.</p>              </td>            </tr>            <tr>              <td style="padding:16px;width:20%;vertical-align:middle">                <img src="images/sequence.jpg" alt="seq" width="160" style="border-style: none">              </td>              <td style="padding:8px;width:80%;vertical-align:middle">                <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.26219">                  <span class="papertitle">The neural representations underlying asymmetric cross-modal prediction of words</span>                </a>                <br>                <a href="https://scholar.google.com/citations?hl=zh-CN&user=4j1QDM0AAAAJ&view_op=list_works&sortby=pubdate">Liang Shi</a>,                <a href="https://scholar.google.com.hk/citations?user=GhyL9KMAAAAJ">Chuqi Liu</a>,                <a href="https://cbls.bnu.edu.cn/PEOPLE/Doctoralstudents/a271c3d1dab74693941a8128ced07af8.htm">Xiaojing Peng</a>,                <strong>Yifei Cao</strong>,                <a href="https://scholar.google.co.il/citations?user=Rv4V3aIAAAAJ&hl=en">Daniel A. Levy</a>                <a href="https://scholar.google.com/citations?user=Gyms-jgAAAAJ&hl=en">Gui Xue</a>                <br>                <em>Human Brain Mapping</em>, 2023                <br>                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>                <p>We investigated the representations of sequence memory in human brain.</p>              </td>            </tr>            <tr>              <td style="padding:16px;width:20%;vertical-align:middle">                <img src="images/ale.png" alt="ale" width="160" style="border-style: none">              </td>              <td style="padding:8px;width:80%;vertical-align:middle">                <a href="https://drive.google.com/file/d/1_S8EQyngbHQrB415o0XkQ4V9SMzdEgWT/view?usp=sharing">                  <span class="papertitle">Effortful and effortless training of executive functions improve brain multiple demand system activities differently: an activation likelihood estimation meta-analysis of functional neuroimaging studies</span>                </a>                <br>                <a href="https://www.researchgate.net/profile/Chan-Tang-2">Chan Tang</a>,                <a href="https://www.researchgate.net/profile/Ting-Huang-40">Ting Huang</a>,                <a href="https://www.researchgate.net/profile/Jipeng-Huang">Jipeng Huang</a>,                <a href="https://www.researchgate.net/profile/Nuo-Xu-48">Nuo Xu</a>,                <a href="https://www.researchgate.net/profile/Yuan-Wang-132">Yuan Wang</a>,                <strong>Yifei Cao</strong>                <br>                <em>Frontiers in Neuroscience</em>, 2023                <br>                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>                <p>Using ALE analysis on fMRI results, we synthesized neuroimaging results from over 50 studies to reveal that effortful and effortless training have different effects on human multi-demand brain system.</p>              </td>            </tr>                        <tr>              <td style="padding:16px;width:20%;vertical-align:middle">                <img src="images/meta.png" alt="meta" width="160" style="border-style: none">              </td>              <td style="padding:8px;width:80%;vertical-align:middle">                <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.580329/full">                  <span class="papertitle">Effects and moderators of computer-based training on children's executive functions: a systematic review and meta-analysis</span>                </a>                <br>                <strong>Yifei Cao</strong>,                <a href="https://www.researchgate.net/profile/Ting-Huang-40">Ting Huang</a>,                <a href="https://www.researchgate.net/profile/Jipeng-Huang">Jipeng Huang</a>,                <a href="https://scholar.google.com/citations?user=xxQynVsAAAAJ&hl=en">Xiaochun Xie</a>,                <a href="https://www.researchgate.net/profile/Yuan-Wang-132">Yuan Wang</a>,                <br>                <em>Frontiers in Psychology</em>, 2020                <br>                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /                <a href="https://www.sciencedirect.com/science/article/pii/S0010028525000027">"smoothing" code</a>                <p>We investigated whether adding game elements into cognitive training programs improve the effects of the intervention on children's executive functions.</p>              </td>            </tr>          </tbody></table>                  </td>      </tr>    </table>  </body></html>

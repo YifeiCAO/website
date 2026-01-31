@@ -49,8 +49,87 @@
       color: #333;
       margin: 0;
     }
+    /* 左侧容器：设置为弹性布局 */
+.project-collab {
+  display: flex;             /* 启用 Flexbox */
+  justify-content: center;   /* 水平居中（关键属性） */
+  align-items: flex-start;   /* 顶部对齐，防止高度不一致时拉伸 */
+  gap: 15px;                 /* 两个导师之间的间距 */
+  /* 如果左侧栏很窄，可以取消下面这行注释，允许空间不足时自动换行 */
+  /* flex-wrap: wrap; */
+}
+
+/* 单个导师的包裹层 */
+.collab-profile {
+  display: flex;
+  flex-direction: column;    /* 头像和名字垂直排列 */
+  align-items: center;       /* 内部元素居中对齐 */
+  text-align: center;        /* 文字居中 */
+  max-width: 100px;          /* 限制最大宽度，防止挤占太多空间 */
+}
+
+/* 头像样式调整 */
+.project-avatar {
+  width: 70px;               /* 设定头像宽度，两个并排时建议稍微改小一点 */
+  height: 70px;
+  object-fit: cover;         /* 防止图片变形 */
+  border-radius: 50%;        /* 圆形头像 */
+  margin-bottom: 8px;        /* 图片和名字的距离 */
+}
+
+/* 名字和机构的文字样式微调 */
+.project-collab-name {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-collab-affil {
+  font-size: 0.75em;
+  color: #666;
+  margin: 4px 0 0 0;
+  line-height: 1.2;
+}
+/* --- 专门用于公司/实习项目的独立样式 --- */
+
+/* 1. 公司信息的包裹层：比学术导师的容器宽一些，防止Logo被挤压 */
+.company-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 130px;  /* 关键点：设定一个适合长方形Logo的宽度 */
+  flex-shrink: 0; /* 防止被挤压 */
+}
+
+/* 2. 公司 Logo 的样式：长方形、无圆角、自适应高度 */
+.company-logo {
+  width: 100%;       /* 撑满上面设定的 130px */
+  height: auto;      /* 自动计算高度，保持原比例，不做任何裁切 */
+  border-radius: 0;  /* 强制直角 */
+  margin-bottom: 8px;
+  display: block;    /* 消除图片底部的微小空隙 */
+}
+
+/* 3. 公司名称文字 */
+.company-name {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.2;
+  color: #333;
+}
+
+/* 4. 职位/附属信息文字 */
+.company-role {
+  font-size: 0.75em;
+  color: #666;
+  margin: 4px 0 0 0;
+  line-height: 1.2;
+}
   </style>  <head>    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <title>Yifei Cao</title>    <meta name="author" content="Yifei Cao">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">    <link rel="stylesheet" type="text/css" href="stylesheet.css">      </head>  <body>    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>      <tr style="padding:0px">        <td style="padding:0px">          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>            <tr style="padding:0px">              <td style="padding:2.5%;width:63%;vertical-align:middle">                <p class="name" style="text-align: center;">                  Yifei Cao                </p>                <p>I'm a PhD student in psychology at <a href="https://www.psych.ucla.edu/">UCLA</a> in Los Angeles, California, where I am supervised by Professor Erie Boorman in <a href='https://ldm.ucdavis.edu/'>Learning and Decision Making Lab</a>. Outside of UCLA, I am also collaborating with Dr. Maria Eckstein in <a href='https://deepmind.google/'>Google DeepMind</a>, and Dr. Xiaoyan Wu in <a href='https://xiaoyanwu2024.github.io/'>Zurich Psychiatric Hospital</a>. My PhD research focuses on the formation and navigation of human cognitive map, computational modeling of reinforcement learning process, and building artificial neural networks learn and decide like humans.                </p>                <p>                  Before coming to UCLA, I earned my Master degree from <a href='https://ethz.ch/en.html'>ETH Zurich</a> and <a href='https://www.uzh.ch/de.html'>University of Zurich</a>, majored in <a href='https://www.neuroscience.uzh.ch/en/Master-Studies/IDB-Overview.html'>Interdisciplinary Brain Sciences</a>. In Zurich, I have worked with Professor <a href='https://www.ini.uzh.ch/en/research/groups/mante.html'>Valerio Mante</a>, <a href='https://www.econ.uzh.ch/en/people/faculty/tobler.html'>Phillipe Tobler</a>, and <a href='https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html'>Silvia Brem</a> on human reinforcement learning and decision making process. During my time in China, I worked with Professor <a href='https://brain.bnu.edu.cn/English/Faculty/CurrentFaculty/Xzz/d293370178f744b0a72c00d82d1117d7.htm'>Gui Xue</a> to investigate the latent cognitive and neural factors contribute to human intelligence.                </p>
-  <p>                  For undergraduate and master students inside and outside UCLA, if you are interested doing a project with me, please reach out. I am always happy to supervise students sharing similar research interests.                </p><p style="text-align:center">                  <a href="caoyifei@g.ucla.edu">Email</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;                  <a href="https://scholar.google.com/citations?user=Umy26vIAAAAJ&hl=en&oi=ao">Scholar</a> &nbsp;/&nbsp;                  <a href="https://x.com/YifeiBNU1">Twitter</a> &nbsp;/&nbsp;                  <a href="https://bsky.app/profile/yifeicaoethz.bsky.social">Bluesky</a> &nbsp;/&nbsp;                  <a href="https://github.com/YifeiCAO">Github</a>                </p>              </td>              <td style="padding:2.5%;width:37%;max-width:37%">                <a href="images/yifeicao.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/yifeicao.jpg" class="hoverZoomLink"></a>              </td>            </tr>          </tbody></table>          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>              <tr>              <td style="padding:16px;width:100%;vertical-align:middle">                <!-- LOGO区域 -->                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; padding: 20px 0;">                  <a href="https://deepmind.google/" target="_blank">                    <img src="images/deepmind_logo.png" alt="DeepMind" style="width:200px; height:auto;">                  </a>                  <a href="https://ethz.ch/en.html" target="_blank">                    <img src="images/eth_Logo.png" alt="ETH Zurich" style="width:200px; height:auto;">                  </a>                  <a href="https://www.ucla.edu/" target="_blank">                    <img src="images/ucla_psych_logo.png" alt="UCLA" style="width:200px; height:auto;">                  </a>                  <a href="https://www.shallowbrain.cc/" target="_blank">                    <img src="images/shallowbrain.png" alt="SBT" style="width:200px; height:auto;">                  </a>                  <a href="https://www.pku.edu.cn/" target="_blank">                    <img src="images/puk_logo.png" alt="PKU" style="width:200px; height:auto;">                  </a>                  <a href="https://www.bnu.edu.cn/" target="_blank">                    <img src="images/idg_bnu.png" alt="IDG-BNU" style="width:200px; height:auto;">                  </a>                </div>
+  <p>                  For undergraduate and master students inside and outside UCLA, if you are interested doing a project with me, please reach out. I am always happy to supervise students sharing similar research interests.                </p><p style="text-align:center">                  <a href="caoyifei@g.ucla.edu">Email</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;                  <a href="https://scholar.google.com/citations?user=Umy26vIAAAAJ&hl=en&oi=ao">Scholar</a> &nbsp;/&nbsp;                  <a href="https://x.com/YifeiBNU1">Twitter</a> &nbsp;/&nbsp;                  <a href="https://bsky.app/profile/yifeicaoethz.bsky.social">Bluesky</a> &nbsp;/&nbsp;                  <a href="https://github.com/YifeiCAO">Github</a>                </p>              </td>              <td style="padding:2.5%;width:37%;max-width:37%">                <a href="images/yifeicao.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/yifeicao.jpg" class="hoverZoomLink"></a>              </td>            </tr>          </tbody></table>          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>              <tr>              <td style="padding:16px;width:100%;vertical-align:middle">                <!-- LOGO区域 -->                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; padding: 20px 0;">                  <a href="https://deepmind.google/" target="_blank">                    <img src="images/deepmind_logo.png" alt="DeepMind" style="width:200px; height:auto;">                  </a>                  <a href="https://ethz.ch/en.html" target="_blank">                    <img src="images/eth_Logo.png" alt="ETH Zurich" style="width:200px; height:auto;">                  </a>                  <a href="https://www.ucla.edu/" target="_blank">                    <img src="images/ucla_psych_logo.png" alt="UCLA" style="width:200px; height:auto;">                  </a>                  <a href="https://www.shallowbrain.cc/" target="_blank">                    <img src="images/shallowbrain.png" alt="SBT" style="width:200px; height:auto;">                  </a>                  <a href="https://www.pku.edu.cn/" target="_blank">                    <img src="images/puk_logo.png" alt="ebk" style="width:200px; height:auto;">                  </a>                  <a href="https://www.bnu.edu.cn/" target="_blank">                    <img src="images/idg_bnu.png" alt="IDG-BNU" style="width:200px; height:auto;">                  </a>                </div>
   <div style="width:100%; margin-bottom: 30px;">
 
   <h2 style="margin-bottom: 15px;">News</h2>
@@ -79,60 +158,114 @@
 
                 </div>
                 <div class="collab-section">
+<h2>Ongoing Academic Projects</h2>
+                <div class="project-item">
+  <div class="project-collab">
 
-                <!-- Ongoing Projects Section -->
-                <div class="collab-section">
-                  <h2>Ongoing Projects</h2>
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/erie_boorman.jpeg" alt="Erie Boorman">
+      <p class="project-collab-name">Erie Boorman</p>
+      <p class="project-collab-affil">UCLA</p>
+    </div>
 
-                  <!-- Project 1 -->
-                  <div class="project-item">
-                    <div class="project-collab">
-                      <img class="project-avatar" src="images/erie_boorman.jpeg" alt="Erie Boorman">
-                      <p class="project-collab-name">Erie Boorman</p>
-                      <p class="project-collab-affil">UC Davis · Learning & Decision Making Lab</p>
-                    </div>
-                    <div class="project-details">
-                      <a href="#" class="project-title">The Formation of Cogntive Maps in Human Brain and Map-Based Inference and Generalization</a>
-                      <p class="project-description">
-                        Investigating how cognitive maps are formed in human brain, how neural representations of the maps change as learning goes. <a href='https://www.nature.com/articles/s41593-021-00916-3'>Previous studies</a> have shown that 2-D map-like representation could be learned in brain regions like entorhinal cortex and hippocampus, while prefrontal cortex tend to compress the representation to 1-D. With Erie, I use behavioral experiment, fMRI, EEG, and hopefully iEEG, and computational models to investigate the change of neural geometry during this learning process, what factor drives the HPC and PFC to form different neural representations, and how these learned neural representations support flexible inference and generalization.
-                      </p>
-                    </div>
-                  </div>
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/james_whittington.jpg" alt="James Whittington"> <p class="project-collab-name">James Whittington</p>
+      <p class="project-collab-affil">Oxford</p>
+    </div>
 
+  </div>
 
+  <div class="project-details">
+    <a href="#" class="project-title">The Formation of Cognitive Maps in Human Brain...</a>
+    <p class="project-description">
+      Investigating how cognitive maps are formed...
+      With <strong>Erie and James</strong>, I investigate how cognitive maps are formed in human brain, how neural representations of the maps change as learning goes. <a href='https://www.nature.com/articles/s41593-021-00916-3'>Previous studies</a> have shown that 2-D map-like representation could be learned in brain regions like entorhinal cortex and hippocampus, while prefrontal cortex tend to compress the representation to 1-D. With Erie, I use behavioral experiment, fMRI, EEG, and hopefully iEEG, and computational models to investigate the change of neural geometry during this learning process, what factor drives the HPC and PFC to form different neural representations, and how these learned neural representations support flexible inference and generalization.
+    </p>
+  </div>
+</div>
 
+                <div class="project-item">
+  <div class="project-collab">
 
-                  <!-- Project 2 -->
-                  <div class="project-item">
-                    <div class="project-collab">
-                      <img class="project-avatar" src="images/maria_eckstein.png" alt="Maria Eckstein">
-                      <p class="project-collab-name">Maria Eckstein</p>
-                      <p class="project-collab-affil">Google DeepMind</p>
-                    </div>
-                    <div class="project-details">
-                      <a href="#" class="project-title">Hybrid Neural-Cognitive Models for Reversal Learning</a>
-                      <p class="project-description">
-                        Artificial neural networks are super predictive of human behaviors compared to classical cognitive models, however, the huge amount of parameters makes it hard to interpret the algorithms of mind. Thanks to HybridRNN, the framework raised by DeepMind, we are able to combine the precision of ANNs and interpretability of cognitive modles to understand human learning process. Here, I have been working with Maria to apply HybridRNN to understand the computational process that enable flexible adaptations in reversal learning context, and using dynamical system analysis to understand the internal representations of HybridRNN.
-                      </p>
-                    </div>
-                  </div>
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/jianqiao_zhu.jpg" alt="Erie Boorman">
+      <p class="project-collab-name">Jian-Qiao Zhu</p>
+      <p class="project-collab-affil">Hongkong University</p>
+    </div>
 
-                  <!-- Project 3 -->
-                  <div class="project-item">
-                    <div class="project-collab">
-                      <img class="project-avatar" src="images/xiaoyan_wu.jpg" alt="Xiaoyan Wu">
-                      <p class="project-collab-name">Xiaoyan Wu</p>
-                      <p class="project-collab-affil">Zurich Psychiatric Hospital</p>
-                    </div>
-                    <div class="project-details">
-                      <a href="#" class="project-title">Neural Mechanism Underlying Human Altruism Motavations</a>
-                      <p class="project-description">
-                        According to <a href='https://www.nature.com/articles/s43588-024-00685-6'>Wu et al., (2024)</a>, the motivation of human altruism behavior is driven by a combination of seven different socioeconomic motives, referred to as a motive cocktail. In collaboration with Xiaoyan, we use the EEG and MEG data recorded during participants performing the same task as previous behavioral study, to decode the temporal and neural neural dynamics that support each different types of motives.
-                      </p>
-                    </div>
-                  </div>
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/hanbo_xie.webp" alt="James Whittington"> <p class="project-collab-name">Hanbo Xie</p>
+      <p class="project-collab-affil">Goergia Tech</p>
+    </div>
 
-                </div>
+  </div>
+
+  <div class="project-details">
+    <a href="#" class="project-title">AlphaCognition: Understanding Human Intelligence with Comprehensive Behavioral Dataset and Artifical Neural Network</a>
+    <p class="project-description">
+      LLMs like <a href='https://www.nature.com/articles/s41586-025-09215-4'>Centaur</a> have shown incredible performance in modeling human behavior. However, giant need of data makes it hard to fine-tune LLMs for predicting and explaining human behaviors, and this might be the case that LLMs take short-cut to only capture human choice preferences instead of comprehensing the task structure. In order to solve this problem, we training a Transformer based on our CAMP large-scale behavioral and neural dataset collected when I was in <a href='https://www.nature.com/articles/s41586-025-09215-4'>Professor Gui Xue's lab</a>. CAMP includes over 1,100 participants performing over 70 cognitive tasks with corresponding fMRI scannings, we believe a comprehensive dataset like this provides us possibility of building a transformer that capture human intelligence structure.
+    </p>
+  </div>
+</div>
+
+<div class="project-item">
+  <div class="project-collab">
+
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/xiaoyan_wu.jpg" alt="Xiaoyan Wu">
+      <p class="project-collab-name">Xiaoyan Wu</p>
+      <p class="project-collab-affil">Zurich Psychiatric Hospital</p>
+    </div>
+
+  </div>
+
+  <div class="project-details">
+    <a href="#" class="project-title">Neural Mechanism Underlying Human Altruism Motavations</a>
+    <p class="project-description">
+      According to <a href='https://www.nature.com/articles/s43588-024-00685-6'>Wu et al., (2024)</a>, the motivation of human altruism behavior is driven by a combination of seven different socioeconomic motives, referred to as a motive cocktail. In collaboration with Xiaoyan, we use the EEG and MEG data recorded during participants performing the same task as previous behavioral study, to decode the temporal and neural neural dynamics that support each different types of motives.
+    </p>
+  </div>
+</div>
+
+<h2>Industry Collaborations</h2>
+<div class="project-item">
+  <div class="project-collab">
+
+    <div class="collab-profile">
+      <img class="project-avatar" src="images/maria_eckstein.png" alt="Maria Eckstein">
+      <p class="project-collab-name">Maria Eckstein</p>
+      <p class="project-collab-affil">Google DeepMind</p>
+    </div>
+
+  </div>
+
+  <div class="project-details">
+    <a href="#" class="project-title">Hybrid Neural-Cognitive Models for Reversal Learning</a>
+    <p class="project-description">
+      Artificial neural networks are super predictive of human behaviors compared to classical cognitive models, however, the huge amount of parameters makes it hard to interpret the algorithms of mind. Thanks to HybridRNN, the framework raised by DeepMind, we are able to combine the precision of ANNs and interpretability of cognitive models to understand human learning process. Here, I have been working with Maria to apply HybridRNN to understand the computational process that enable flexible adaptations in reversal learning context, and using dynamical system analysis to understand the internal representations of HybridRNN.
+    </p>
+  </div>
+</div>
+
+<div class="project-item">
+
+  <div class="project-collab">
+    <div class="company-profile">
+      <img class="company-logo" src="images/ebkernel.png" alt="EB Kernel Lab">
+      <p class="company-name">EBKernel Lab</p>
+      <p class="company-role">Research Intern</p>
+    </div>
+  </div>
+
+  <div class="project-details">
+    <a href="#" class="project-title">Neural Cognitive Visual Language Navigation (NC-VLN)</a>
+    <p class="project-description">
+      With EBKernel, I am working on next generation Visual Language Navigation system based on scientific findings from human cognitive maps. Based on <a href='https://www.sciencedirect.com/science/article/pii/S009286742031388X'>  Tolman-Eichenbaum Machine </a> and <a href='https://www.nature.com/articles/s41586-024-08392-y'>  Vector-Hash </a> models, human entorhinal-hippocampal circuit is an effective framework with predefined spatial grid backbone and effective item-space binding learning process, enabling human generalize their spatial and nonspatial knowledge in different envoronment. Therefore, we aim at building the best brain-inspired VLN system with high flexibility and generalizability!
+    </p>
+  </div>
+
+</div>
+
                                 <!-- Collaborators -->                <div class="collab-section">                  <h2>Important Collaborators</h2>                  <div class="collab-grid">                    <a class="collab-card" href="https://www.ini.uzh.ch/en/research/groups/mante.html" target="_blank" aria-label="Valerio Mante">                      <img class="collab-avatar" src="images/valerio_mante.jpeg" alt="Valerio Mante headshot">                      <p class="collab-name">Valerio Mante</p>                      <p class="collab-affil">ETH Zurich · INI</p>                    </a>                                    <a class="collab-card" href="https://www.econ.uzh.ch/en/people/faculty/tobler.html" target="_blank" aria-label="Liyuan Li">                      <img class="collab-avatar" src="images/liyuan_li.jpeg" alt="Philippe Tobler headshot">                      <p class="collab-name">Liyuan Li</p>                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>                    </a>                                    <a class="collab-card" href="https://www.kjpd.uzh.ch/de/transl-forschung/kog-neuro/team/leitung-kogn-neurow/brem.html" target="_blank" aria-label="Silvia Brem">                      <img class="collab-avatar" src="images/chonghao_cai.jpeg" alt="Silvia Brem headshot">                      <p class="collab-name">Chonghao Cai</p>                      <p class="collab-affil">ETH Zurich · INI & ShallowBrain</p>                    </a>
                                 <a class="collab-card" href="https://brain.bnu.edu.cn/English/Faculty/CurrentFaculty/Xzz/d293370178f744b0a72c00d82d1117d7.htm" target="_blank" aria-label="Gui Xue">                      <img class="collab-avatar" src="images/gui_xue.jpg" alt="Gui Xue headshot">                      <p class="collab-name">Gui Xue</p>                      <p class="collab-affil">IDG/McGOVERN BNU</p>                    </a>
                                 <a class="collab-card" href="https://www.linkedin.com/in/hanbo-xie-418885308" target="_blank" aria-label="Hanbo Xie">                      <img class="collab-avatar" src="images/hanbo_xie.webp" alt="Hanbo Xie headshot">                      <p class="collab-name">Hanbo Xie</p>                      <p class="collab-affil">Goergia Tech</p>                    </a>

@@ -202,7 +202,7 @@ body.zh .i18n-zh { display: inline; }
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">Yifei Cao</p>
+                <p class="name" style="text-align: center;"><span class="i18n-en">Yifei Cao</span><span class="i18n-zh">曹逸飞</span></p>
                 <p>
                   <span class="i18n-en">I'm a researcher at the intersection of <strong>cognitive science, neuroscience, artificial intelligence, and robotics</strong>. My dream is to uncover the computations the human brain uses to learn, reason, and decide — and to use them to build better, more human-like AI.</span>
                   <span class="i18n-zh">我是一名工作在<strong>认知科学、神经科学、人工智能与机器人</strong>交叉领域的研究者。我的梦想是揭示人脑用于学习、推理与决策的计算原理，并以此启发出更好、更接近人类的人工智能。</span>
@@ -545,11 +545,13 @@ body.zh .i18n-zh { display: inline; }
         var zh = document.body.classList.toggle('zh');
         document.getElementById('lang-toggle').textContent = zh ? 'English' : '中文';
         document.documentElement.lang = zh ? 'zh-CN' : 'en';
+        document.title = zh ? '曹逸飞' : 'Yifei Cao';
         try { localStorage.setItem('site-lang', zh ? 'zh' : 'en'); } catch (e) {}
       }
       if (document.body.classList.contains('zh')) {
         document.getElementById('lang-toggle').textContent = 'English';
         document.documentElement.lang = 'zh-CN';
+        document.title = '曹逸飞';
       }
     </script>
   </body>

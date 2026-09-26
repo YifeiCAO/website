@@ -177,6 +177,20 @@
   max-width: 38ch;
 }
 
+/* Featured research project */
+.mindgym-feature { margin: 10px 0 32px; }
+.mindgym-feature h2 { margin-bottom: 14px; }
+.mindgym-figure { display: block; }
+.mindgym-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.10);
+}
+.mindgym-feature p { line-height: 1.6; }
+.mindgym-link { font-weight: 600; }
+
 /* --- Language toggle (EN / 中文) --- */
 .i18n-zh { display: none; }
 body.zh .i18n-en { display: none; }
@@ -267,6 +281,18 @@ body.zh .i18n-zh { display: inline; }
                     </li>
                   </ul>
                 </div>
+
+                <section class="mindgym-feature" aria-labelledby="mindgym-heading">
+                  <h2 id="mindgym-heading"><span class="i18n-en">Featured Project: MindGym</span><span class="i18n-zh">精选项目：MindGym</span></h2>
+                  <a class="mindgym-figure" href="images/mindgym-overview.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MindGym diagram / 打开 MindGym 完整示意图">
+                    <img src="images/mindgym-overview.jpg" alt="MindGym diagram: cognitive task library, agent environment, human behavior modeling, and evaluation / MindGym 示意图：认知任务库、智能体环境、人类行为建模与评估" loading="lazy" decoding="async">
+                  </a>
+                  <p>
+                    <span class="i18n-en">MindGym turns cognitive psychology and behavioral economics experiments into interactive environments for AI agents. It compares task performance with human behavior and explores how agent architecture and memory shape decisions.</span>
+                    <span class="i18n-zh">MindGym 将认知心理学与行为经济学实验转化为 AI 智能体可交互的任务环境，比较任务表现与人类行为，并研究智能体架构和记忆如何影响决策。</span>
+                  </p>
+                  <a class="mindgym-link" href="https://mindgym-observatory.yifei-cao630701.chatgpt.site/" target="_blank" rel="noopener noreferrer"><span class="i18n-en">Explore MindGym ↗</span><span class="i18n-zh">查看 MindGym ↗</span></a>
+                </section>
 
                 <div class="collab-section">
                   <h2><span class="i18n-en">Ongoing Academic Projects</span><span class="i18n-zh">在研学术项目</span></h2>

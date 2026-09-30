@@ -144,37 +144,17 @@
   color: #333;
 }
 
-/* --- Demo showcase --- */
-.demo-section { padding: 8px 0 4px; }
-.demo-section h2 { margin: 0 0 14px; }
-.demo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
-  align-items: start;
-}
-.demo-card { text-align: center; }
-.demo-video {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-  background: #f2f2f2;
-  box-shadow: 0 2px 10px rgba(0,0,0,.10);
-}
-.demo-title {
-  font-weight: 600;
-  font-size: 1.05em;
-  margin: 12px 0 4px;
-  color: #1a73e8;
-}
-.demo-desc {
-  font-size: 0.9em;
-  color: #555;
-  line-height: 1.5;
-  margin: 0 auto;
-  max-width: 38ch;
+/* --- MemoryLoop research --- */
+.memoryloop-section { padding: 8px 0 16px; }
+.memoryloop-section h2 { margin: 0 0 14px; }
+.memoryloop-layout { display: flex; align-items: center; gap: 24px; }
+.memoryloop-image-link { display: block; flex: 0 0 240px; max-width: 35%; }
+.memoryloop-image { display: block; width: 100%; height: auto; border-radius: 10px; }
+.memoryloop-copy { flex: 1; min-width: 0; }
+.memoryloop-copy p { margin: 0 0 12px; line-height: 1.6; }
+@media (max-width: 640px) {
+  .memoryloop-layout { flex-direction: column; align-items: stretch; }
+  .memoryloop-image-link { width: 100%; max-width: 320px; margin: 0 auto; flex-basis: auto; }
 }
 
 /* --- Language toggle (EN / 中文) --- */
@@ -369,28 +349,18 @@ body.zh .i18n-zh { display: inline; }
                   </div>
                 </div>
 
-                <!-- Demos -->
-                <div class="demo-section">
-                  <h2><span class="i18n-en">Brain Inspired AI and Robotics Demos</span><span class="i18n-zh">脑启发的人工智能与机器人 Demo</span></h2>
-                  <div class="demo-grid">
-                    <div class="demo-card">
-                      <video class="demo-video" autoplay loop muted playsinline preload="metadata">
-                        <source src="images/navigation.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                      <p class="demo-title"><span class="i18n-en">Cognitive Inspired Vision Language Navigation</span><span class="i18n-zh">认知启发的视觉语言导航</span></p>
-                      <p class="demo-desc"><span class="i18n-en">A brain-inspired vision-language navigation agent that builds cognitive-map-like spatial representations to navigate novel environments.</span><span class="i18n-zh">一个脑启发的视觉语言导航智能体，通过构建类认知地图的空间表征，在陌生环境中自主导航。</span></p>
-                    </div>
-                    <div class="demo-card">
-                      <video class="demo-video" autoplay loop muted playsinline preload="metadata">
-                        <source src="images/sprint.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                      <p class="demo-title"><span class="i18n-en">Athlete2Robot</span><span class="i18n-zh">Athlete2Robot（运动员到机器人）</span></p>
-                      <p class="demo-desc"><span class="i18n-en">Transferring human athletic motion to a humanoid robot through motion imitation.</span><span class="i18n-zh">通过动作模仿，将人类的运动技能迁移到人形机器人上。</span></p>
+                <section class="memoryloop-section" aria-labelledby="memoryloop-heading">
+                  <h2 id="memoryloop-heading">MemoryLoop</h2>
+                  <div class="memoryloop-layout">
+                    <a class="memoryloop-image-link" href="images/memoryloop.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MemoryLoop illustration / 打开 MemoryLoop 完整示意图">
+                      <img class="memoryloop-image" src="images/memoryloop.png" alt="MemoryLoop: human memory inspires AI, and AI supports human cognition / 人类记忆启发 AI，AI 辅助人类认知" loading="lazy" decoding="async">
+                    </a>
+                    <div class="memoryloop-copy">
+                      <p><span class="i18n-en">MemoryLoop draws on the brain's efficient lifelong learning and memory systems to improve memory in embodied AI.</span><span class="i18n-zh">MemoryLoop 借鉴人脑高效的终身学习与记忆系统，改进具身智能的记忆机制。</span></p>
+                      <p><span class="i18n-en">It also studies the weaknesses of human memory and patterns of decline, so robots and AI systems can provide effective cognitive support and augmentation.</span><span class="i18n-zh">它也研究人类记忆的弱点与衰退模式，让机器人和 AI 系统提供有效的认知辅助与增强。</span></p>
                     </div>
                   </div>
-                </div>
+                </section>
 
                 <!-- Collaborators -->
                 <div class="collab-section">
